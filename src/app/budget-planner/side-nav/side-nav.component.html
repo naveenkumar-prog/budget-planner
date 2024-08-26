@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="main">
+<div class="navbar">
+    <div class="toggle-button-row"  (click)="toggleSlideOut()">
+        <mat-icon class="menu-icon" >menu</mat-icon>
+    </div>
+    <h2>{{ 'Budget Planner' | uppercase }}</h2>
+</div>
+
+<div *ngIf="isSlideOut" class="slide-out-panel">
+    <div class="slide-out-content">
+        <h3 class="navbar">Budget Planner</h3>
+        <p class="edit-col" (click)="onDash()">Dashboard</p>
+        <p class="edit-col" (click)="onProfile()">Profile</p>
+        <p class="edit-col" (click)="onHistory()">Prev History</p>
+        <p class="edit-col" (click)="onLogOut()">Log Out</p>
+
+    </div>
+</div>
+</div>
